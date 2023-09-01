@@ -1,0 +1,65 @@
+*{
+    font-family: Oxygen;
+    font-size: 30px;
+    -webkit-text-fill-color: white;
+
+}
+section{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+section>div{
+    position: absolute;
+    left: -476px;
+    width: 500px;
+    aspect-ratio: 5/0.5;
+    background-color: plum;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    padding: 10px;
+    transition-delay: 0.5s;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+section>div:first-child{
+    top: 50px;
+}
+section>div:nth-child(2){
+    top: 150px;
+}
+section>div:nth-child(3){
+    top: 250px;
+}
+section>div:nth-child(4){
+    top: 350px;
+}
+section>div:nth-child(5){
+    top: 450px;
+}
+p{
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 0;
+    margin: auto;
+}
+.icon{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30px;
+    aspect-ratio: 1/1;
+}
+img{
+    width: 40px;
+    height: auto;
+}
+div:hover{
+    left: 0px;
+}

@@ -1,0 +1,42 @@
+*{
+    font-family: Oxygen;
+    font-size: 15px;
+    text-align: center;
+    -webkit-text-fill-color: white;
+}
+section{
+    background-color: blue;
+}
+section>div{
+    width: 25%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background-color: black;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    border: solid 10px white;
+}
+div::before{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    content: "";
+    border: solid 10px white;
+    border-radius: 100%;
+
+    border-top-color: red;
+}
+div:hover::before{
+    transform: rotate(360deg);
+    transition-duration: 2s;
+}
