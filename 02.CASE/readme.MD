@@ -15,7 +15,3 @@
     section>div:first-child:hover{
     transform: rotate(180deg);
     }
-
-https://youtu.be/tptNcgMxHGg?si=YKZA0vzJumR-9rQ3
-
-![img.png](assets/img/img.png)

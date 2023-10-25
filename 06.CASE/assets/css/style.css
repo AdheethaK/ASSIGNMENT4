@@ -13,7 +13,7 @@ body{
 }
 #city{
     position: absolute;
-    top: 35.4vh;
+    top: 40vh;
 
     width: 100%;
     z-index: 999;
@@ -31,7 +31,28 @@ body{
 }
 #wheel1{
     left: 5%;
+    animation: 2s move-left ease-in infinite;
+}
+@keyframes move-left {
+    0%{
+        transform-origin: center;
+        rotate: 0deg;
+    }
+    100%{
+        transform-origin: center;
+        rotate: -180deg;
+    }
 }
 #wheel2{
     left: 70%;
+    animation: 2s move-right ease-in infinite;
+}
+@keyframes move-right {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        transform-origin: center;
+        rotate: 180deg;
+    }
 }
