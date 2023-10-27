@@ -1,58 +1,153 @@
-body{
-    overflow:hidden;
-}
-#sky>img{
+/*---------------------the sky :)-----------------------*/
+#sky > div{
     width: 100%;
     height: 75vh;
+    background-image: url("/06.CASE/assets/img/sky.jpg");
 }
-#road>img{
-    position: absolute;
-    bottom: 0;
+/*-----------------------the city :|--------------------*/
+#city>section{
     width: 100%;
-    height: 25vh;
-}
-#city{
+    height: 250px;
+    /*background-color: deeppink;*/
     position: absolute;
     top: 40vh;
+    overflow: hidden;
+}
+#city>section>div{
+    position: absolute;
 
+    width: 1416px;
+    height: 250px;
+    /*background-color: lightblue;*/
+    background-image: url("/06.CASE/assets/img/city.png");
+}
+#city>section>div:first-of-type{
+    /*background-color: purple;*/
+    transform: translateX(0px);
+
+    animation: slider-city-1 3s infinite ease-in-out;
+}
+#city>section>div:nth-of-type(2){
+    /*background-color: grey;*/
+    transform: translateX(1416px);
+
+    animation: slider-city-2 3s infinite ease-in-out;
+}
+/*------------animation for the city -------------------*/
+@keyframes slider-city-1 {
+    0%{
+        transform: translateX(0px);
+    }
+    80%{
+        transform: translateX(-1416px);
+    }
+    100%{
+        transform: translateX(-1416px);
+    }
+}
+@keyframes slider-city-2 {
+    0%{
+        transform: translateX(1416px);
+    }
+    80%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+/*----------------the road :)---------------*/
+/*img src="assets/img/road.jpg" alt="" width="5139" height="300"*/
+#road>section{
     width: 100%;
-    z-index: 999;
-}
-#car{
-    position: absolute;
-    left: 40%;
+    height: 180px;
+    background-color: darkslategray;
 
-    z-index: 99999;
-    top: 65vh;
-}
-.wheel{
     position: absolute;
-    top: 48%;
+    bottom: 0;
+
+    overflow: hidden;
 }
-#wheel1{
-    left: 5%;
-    animation: 2s move-left ease-in infinite;
+#road>section>div{
+    width: 5139px;
+    height: 180px;
+
+    background-image: url("/06.CASE/assets/img/road.jpg");
+
+    animation: road 3s infinite ease-in-out;
 }
-@keyframes move-left {
+/*--------------the road animation---------------*/
+@keyframes road {
     0%{
-        transform-origin: center;
-        rotate: 0deg;
+        transform: translateX(0px);
+    }
+    80%{
+        transform: translateX(-1416px);
     }
     100%{
-        transform-origin: center;
-        rotate: -180deg;
+        transform: translateX(-1416px);
     }
 }
-#wheel2{
-    left: 70%;
-    animation: 2s move-right ease-in infinite;
+/*-----------------the car :)-----------------*/
+#car>section{
+    width: 240px;
+    height: 100px;
+
+    /*background-color: yellow;*/
+    position: absolute;
+    top: 70vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    background-image: url("/06.CASE/assets/img/car.png");
+    background-size: contain;
 }
-@keyframes move-right {
-    0%{
-        rotate: 0deg;
-    }
-    100%{
-        transform-origin: center;
-        rotate: 180deg;
-    }
+/*-----------------the wheels-------------------*/
+#wheels>section{
+    width: 220px;
+    height: 50px;
+    /*background-color: orangered;*/
+
+    position: absolute;
+    top: 77.5vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#wheels>section>div{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+
+    position: absolute;
+
+    border-radius: 100%;
+    background-image: url("/06.CASE/assets/img/wheel.png");
+    background-size: contain;
+}
+#wheels>section>div:first-of-type{
+    left: 6.5px;
+
+    animation: left-wheel 3s infinite ease-in-out;
+}
+#wheels>section>div:nth-of-type(2){
+    right: 14px;
+    top: 0;
+
+    animation: right-wheel  3s infinite ease-in-out;
+}
+/*---------------------animation for left wheel----------------*/
+@keyframes left-wheel {
+    0%{transform: rotate(0deg);}
+    60%{transform: rotate(360deg);}
+    85%{transform: rotate(360deg);}
+    100%{transform: rotate(380deg);}
+}
+/*---------------------animation for right wheel----------------*/
+@keyframes right-wheel {
+    0%{transform: rotate(0deg);}
+    60%{transform: rotate(-360deg);}
+    85%{transform: rotate(-360deg);}
+    100%{transform: rotate(-380deg);}
 }
