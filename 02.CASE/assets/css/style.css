@@ -22,6 +22,16 @@ section>div{
 
     border: solid 10px white;
 }
+section>div > h1{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 44%;
+    margin: auto;
+
+    font-family: "Inter",sans-serif;
+    font-weight: 900;
+}
 div::before{
     position: absolute;
     left: 0;
